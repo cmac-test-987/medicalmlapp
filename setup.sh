@@ -1,9 +1,15 @@
+#!/bin/sh
+
 mkdir -p ~/.streamlit/
 
+# Fixing the missing double quote and adding a shebang line
 echo "\
 [general]\n\
-email = \"cfarr311y@gmail.com"\n\
+email = \"cfarr311y@gmail.com\"\n\
 " > ~/.streamlit/credentials.toml
+
+# Setting a default value for PORT
+PORT=${PORT:-8501}
 
 echo "\
 [server]\n\
