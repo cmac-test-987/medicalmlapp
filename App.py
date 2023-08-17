@@ -3,15 +3,14 @@ from keras.models import load_model
 from keras.preprocessing.image import img_to_array, load_img
 import numpy as np
 
-# Cache the model loading
-@st.cache(allow_output_mutation=True)
-def load_keras_model():
+@st.cache_resource
+def load_my_model():
     return load_model('MedicalML_ResNet.h5')
 
-model = load_keras_model()
+model = load_my_model()
 
 # Streamlit web app
-st.title("X-Ray Classifier")
+st.title("X-Ray Image Classifier")
 
 col1, col2, col3 = st.columns([1,6,1])
 
