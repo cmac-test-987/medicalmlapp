@@ -5,6 +5,9 @@ import numpy as np
 import sqlite3
 import pandas as pd
 
+# This should be the first Streamlit command
+st.set_page_config(page_title="X-Ray Image Classifier", layout="wide", initial_sidebar_state="collapsed")
+
 @st.cache_resource
 def load_my_model():
     return load_model('MedicalML_ResNet.h5')
