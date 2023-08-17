@@ -46,3 +46,43 @@ feedback = st.slider("Rate your experience (1-10)", 1, 10)
 if st.button("Submit Feedback"):
     st.write(f"Thank you for your feedback! You rated the app as {feedback}/10")
     # Optionally, you can save this feedback to a database or file
+
+import streamlit as st
+import sqlite3
+import pandas as pd
+
+# Create a new SQLite database or connect to existing one
+con = sqlite3.connect('feedback.db')
+cursor = con.cursor()
+
+# Create a table for feedback if not already present
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS feedback_data (
+        feedback INTEGER
+    )
+''')
+con.commit()
+
+# Save feedback to the SQLite database
+def save_feedback(feedback):
+    cursor.execute("INSERT INTO feedback_data (feedback) VALUES (?)", (feedback,))
+    con.commit()
+
+# Streamlit UI
+# Feedback System
+st.write("## We value your feedback!")
+feedback = st.slider("Rate your experience (1-10)", 1, 10)
+
+if st.button("Submit Feedback"):
+    save_feedback(feedback)
+    st.write(f"Thank you for your feedback! You rated the app as {feedback}/10")
+
+# Display feedback summary
+if st.button("Show Feedback Summary"):
+    # Fetch feedback data from database
+    cursor.execute("SELECT feedback, COUNT(*) as count FROM feedback_data GROUP BY feedback")
+    feedback_data = cursor.fetchall()
+
+    # Convert the feedback data to DataFrame for visualization
+    df = pd.DataFrame(feedback_data, columns=["Feedback", "Count"])
+    st.bar_chart(df.set_index("Feedback"))
