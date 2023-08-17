@@ -15,7 +15,7 @@ st.title("X-Ray Image Classifier")
 col1, col2, col3 = st.columns([1,6,1])
 
 with col2:
-    uploaded_file = st.file_uploader("Choose an X-ray image...", type="jpg")
+    uploaded_file = st.file_uploader("Choose an X-ray image...", type=["jpg", "jpeg", "png", "webp"])
 
     if uploaded_file is not None:
         image = load_img(uploaded_file, target_size=(224, 224))
