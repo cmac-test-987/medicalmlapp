@@ -25,6 +25,8 @@ st.markdown("""
 def load_my_model():
     return load_model('MedicalML_ResNet.h5')
 
+model = load_my_model()
+
 # Database Operations
 def init_db():
     con = sqlite3.connect('feedback.db')
