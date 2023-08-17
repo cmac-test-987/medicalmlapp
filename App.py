@@ -2,6 +2,8 @@ import streamlit as st
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array, load_img
 import numpy as np
+import sqlite3
+import pandas as pd
 
 @st.cache_resource
 def load_my_model():
@@ -28,7 +30,6 @@ with col2:
         img_array = np.expand_dims(img_array, axis=0)
 
         predictions = model.predict(img_array)
-
         confidence_for_Normal_XRay = predictions[0][0]
 
         if confidence_for_Normal_XRay >= .5:
@@ -39,17 +40,6 @@ with col2:
             confidence = 1 - confidence_for_Normal_XRay
 
         st.write(f"Predicted Class: {predicted_class} with {confidence * 100:.2f}% confidence")
-
-# Feedback System
-st.write("## We value your feedback!")
-feedback = st.slider("Rate your experience (1-10)", 1, 10)
-if st.button("Submit Feedback"):
-    st.write(f"Thank you for your feedback! You rated the app as {feedback}/10")
-    # Optionally, you can save this feedback to a database or file
-
-import streamlit as st
-import sqlite3
-import pandas as pd
 
 # Create a new SQLite database or connect to existing one
 con = sqlite3.connect('feedback.db')
@@ -68,14 +58,13 @@ def save_feedback(feedback):
     cursor.execute("INSERT INTO feedback_data (feedback) VALUES (?)", (feedback,))
     con.commit()
 
-# Streamlit UI
 # Feedback System
 st.write("## We value your feedback!")
-feedback = st.slider("Rate your experience (1-10)", 1, 10)
+feedback1 = st.slider("Rate your experience (1-10)", 1, 10, key="feedback_slider1")
 
 if st.button("Submit Feedback"):
-    save_feedback(feedback)
-    st.write(f"Thank you for your feedback! You rated the app as {feedback}/10")
+    save_feedback(feedback1)
+    st.write(f"Thank you for your feedback! You rated the app as {feedback1}/10")
 
 # Display feedback summary
 if st.button("Show Feedback Summary"):
