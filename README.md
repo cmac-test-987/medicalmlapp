@@ -85,8 +85,11 @@ Distributed under the MIT License. See LICENSE for more information.
 Contact
 
 Cormac:
+
 https://www.linkedin.com/in/cormac-farrelly-b080b9279/
+
 https://twitter.com/Cmac_GN
+
 https://www.instagram.com/cmac_987/
 
 
