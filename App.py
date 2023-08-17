@@ -53,12 +53,12 @@ def predict_image(img_array):
         return "Normal X-Ray", 1 - confidence_for_Normal_XRay
 
 # Main App UI
-st.markdown('# 🩻 X-Ray Image Classifier', unsafe_allow_html=True)
+st.markdown('# 🌡 X-Ray Image Classifier', unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1,6,1])
 
 with col2:
-    uploaded_file = st.file_uploader("📊 Choose an X-ray image...", type=["jpg", "jpeg", "png", "webp"])
+    uploaded_file = st.file_uploader("🩻 Choose an X-ray image...", type=["jpg", "jpeg", "png", "webp"])
     if uploaded_file:
         image = load_img(uploaded_file, target_size=(224, 224))
         st.image(image, caption='🔍 Uploaded Image.', use_column_width=True)
@@ -83,3 +83,19 @@ if st.button("📊 Show Feedback Summary"):
     feedback_data = cursor.fetchall()
     df = pd.DataFrame(feedback_data, columns=["Feedback", "Count"])
     st.bar_chart(df.set_index("Feedback"))
+
+# Author and Social Media Section
+st.markdown("""
+    <div style="display: flex; align-items: center; margin-top: 20px;">
+        <h3 style="margin: 0;">👨‍💻 By Cormac :) </h3>
+        <a href="https://www.linkedin.com/in/cormac-farrelly-b080b9279/" target="_blank" style="margin-left: 10px;">
+            <i class="fab fa-linkedin" style="font-size: 24px;"></i>
+        </a>
+        <a href="https://twitter.com/Cmac_GN" target="_blank" style="margin-left: 10px;">
+            <i class="fab fa-twitter-square" style="font-size: 24px;"></i>
+        </a>
+        <a href="https://www.instagram.com/cmac_987/" target="_blank" style="margin-left: 10px;">
+            <i class="fab fa-instagram" style="font-size: 24px;"></i>
+        </a>
+    </div>
+""", unsafe_allow_html=True)
