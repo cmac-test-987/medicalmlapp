@@ -9,8 +9,9 @@ import sqlite3
 # Streamlit Configuration
 st.set_page_config(page_title="X-Ray Image Classifier", initial_sidebar_state="collapsed")
 
-# Styling
+# Styling and FontAwesome Integration
 st.markdown("""
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
         .reportview-container {
             background-color: #f0f2f6;
@@ -55,12 +56,12 @@ def predict_image(img_array):
         return "Normal X-Ray", 1 - confidence_for_Normal_XRay
 
 # Main App UI
-st.markdown('# 🌡 X-Ray Image Classifier', unsafe_allow_html=True)
+st.markdown('# 🩻 X-Ray Image Classifier', unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1,6,1])
 
 with col2:
-    uploaded_file = st.file_uploader("🩻 Choose an X-ray image...", type=["jpg", "jpeg", "png", "webp"])
+    uploaded_file = st.file_uploader("📊 Choose an X-ray image...", type=["jpg", "jpeg", "png", "webp"])
     if uploaded_file:
         image = load_img(uploaded_file, target_size=(224, 224))
         st.image(image, caption='🔍 Uploaded Image.', use_column_width=True)
