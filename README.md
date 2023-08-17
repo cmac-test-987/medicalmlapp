@@ -6,7 +6,7 @@ An intuitive and user-friendly web application developed using Streamlit to clas
 
 X-Ray Classifier Demo
 
-    Replace path_to_demo_gif_or_image_here.jpg with the actual path to your demo GIF or image if you have one.
+![image](https://github.com/cmacidontcare/medicalmlapp/assets/139860768/acdb6a61-86a6-404f-bfb5-e1a2403d07ca)
 
 Features
 
