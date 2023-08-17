@@ -2,18 +2,25 @@
 
 🩻 X-Ray Image Classifier
 
+
 An intuitive and user-friendly web application developed using Streamlit to classify X-ray images and identify if they indicate the presence of pneumonia.
+
 
 X-Ray Classifier Demo
 
 ![image](https://github.com/cmacidontcare/medicalmlapp/assets/139860768/acdb6a61-86a6-404f-bfb5-e1a2403d07ca)
 
+
 Features
 
-    Upload & Visualize: Easily upload X-ray images and get a visual preview.
-    Instant Prediction: The app uses a trained deep learning model to make instant predictions on the uploaded images.
-    Feedback System: Users can provide feedback on the predictions, aiding in iterative improvement.
-    Feedback Summary: Users can view a summary of the feedback received for the application.
+1. Upload & Visualize: Easily upload X-ray images and get a visual preview.
+
+2. Instant Prediction: The app uses a trained deep learning model to make instant predictions on the uploaded images.
+
+3. Feedback System: Users can provide feedback on the predictions, aiding in iterative improvement.
+
+4. Feedback Summary: Users can view a summary of the feedback received for the application.
+
 
 Live Demo
 
@@ -23,20 +30,32 @@ Getting Started
 
 Prerequisites
 
-    Python 3.x
-    Streamlit
-    TensorFlow or Keras
-    SQLite
+    Python==3.11.4
+    streamlit==1.25.0
+    keras==2.13.1
+    numpy==1.24.3
+    Pillow==9.5.0
+    h5py==3.9.0
+    tensorflow-cpu==2.13.0
+    pandas==2.0.3
+
 
 Installation & Setup
 
-   1. Clone the repository: https://github.com/cmacidontcare/medicalmlapp.git
+   1. Clone the repository:
 
-   2. Install the required packages: pip install -r requirements.txt
+    https://github.com/cmacidontcare/medicalmlapp.git
 
-   3. Run the Streamlit app: streamlit run app.py
+   2. Install the required packages:
 
+    pip install -r requirements.txt
+
+   3. Run the Streamlit app:
+
+    streamlit run app.py
+    
 The app should now be running on http://localhost:8501/.
+
 
 Usage
 
