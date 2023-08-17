@@ -14,9 +14,6 @@ def load_my_model():
 
 model = load_my_model()
 
-# Set page config
-st.set_page_config(page_title="X-Ray Image Classifier", layout="wide", initial_sidebar_state="collapsed")
-
 # Use markdown for custom stylings
 st.markdown("""
     <style>
