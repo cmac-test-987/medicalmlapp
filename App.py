@@ -9,6 +9,7 @@ import sqlite3
 # Streamlit Configuration
 st.set_page_config(page_title="X-Ray Image Classifier", initial_sidebar_state="collapsed")
 
+
 # Styling and FontAwesome Integration
 st.markdown("""
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
