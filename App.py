@@ -5,6 +5,7 @@ import pandas as pd
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array, load_img
 import sqlite3
+import streamlit.components.v1 as components
 
 # Streamlit Configuration
 st.set_page_config(page_title="X-Ray Image Classifier", initial_sidebar_state="collapsed")
@@ -88,6 +89,12 @@ if st.button("📊 Show Feedback Summary"):
     df = pd.DataFrame(feedback_data, columns=["Feedback", "Count"])
     st.bar_chart(df.set_index("Feedback"))
 
+badge_url = "https://cmacidontcare.github.io/medicalmlapp/linkedin_badge.html" components
+
+# LinkedIn Badge Embedding
+badge_url = "https://cormacfarrelly.github.io/xray-app/linkedin_badge.html"
+components.iframe(badge_url)
+
 # Author and Social Media Section
 st.markdown("""
     <div style="display: flex; align-items: center; margin-top: 20px;">
@@ -100,3 +107,5 @@ st.markdown("""
         </a>
     </div>
 """, unsafe_allow_html=True)
+
+
