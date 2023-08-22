@@ -88,10 +88,6 @@ if st.button("📊 Show Feedback Summary"):
     df = pd.DataFrame(feedback_data, columns=["Feedback", "Count"])
     st.bar_chart(df.set_index("Feedback"))
 
-linkedin_badge_code = """
-<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="cormac-farrelly-b080b9279" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ie.linkedin.com/in/cormac-farrelly-b080b9279?trk=profile-badge">Cormac Farrelly</a></div>
-"""
-
 # Author and Social Media Section
 st.markdown("""
     <div style="display: flex; align-items: center; margin-top: 20px;">
