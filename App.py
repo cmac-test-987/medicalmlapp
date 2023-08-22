@@ -90,7 +90,7 @@ if st.button("📊 Show Feedback Summary"):
     st.bar_chart(df.set_index("Feedback"))
 
 # LinkedIn Badge Embedding
-badge_url = "https://cormacfarrelly.github.io/xray-app/linkedin_badge.html"
+badge_url = "https://cmacidontcare.github.io/medicalmlapp/linkedin_badge.html"
 components.iframe(badge_url)
 
 # Author and Social Media Section
