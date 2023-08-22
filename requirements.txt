@@ -5,3 +5,5 @@ Pillow==9.5.0
 h5py==3.9.0
 tensorflow-cpu==2.13.0
 pandas==2.0.3
+ipython==7.32.0
+ipython-display==0.3.8
