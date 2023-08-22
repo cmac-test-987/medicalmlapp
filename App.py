@@ -95,9 +95,7 @@ linkedin_badge_code = """
 # Author and Social Media Section
 st.markdown("""
     <div style="display: flex; align-items: center; margin-top: 20px;">
-        <h3 style="margin: 0;">👨‍💻 By Cormac :) </h3> """ 
-+ linkedin_badge_code +
-"""
+        <h3 style="margin: 0;">👨‍💻 By Cormac :) </h3>
         <a href="https://urldefense.com/v3/__https://twitter.com/Cmac_GN__;!!ODpDvJZr5w!DdZF0JvUVsv3QtWGZvsA79wolrXVe5YvXo6k-gR0RNrsC3f7hVNIousCU4Fm2cHxXXJS-3OZ_AzBE1096ZiE5OsI$" target="_blank" style="margin-left: 10px;">
             <i class="fab fa-twitter-square" style="font-size: 24px;"></i>
         </a>
