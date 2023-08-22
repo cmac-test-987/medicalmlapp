@@ -103,3 +103,18 @@ st.markdown("""
         </a>
     </div>
 """, unsafe_allow_html=True)
+
+# Import the necessary libraries
+import streamlit as st
+from IPython.display import HTML
+
+# Get the LinkedIn badge code
+linkedin_badge_code = """
+<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="cormac-farrelly-b080b9279" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ie.linkedin.com/in/cormac-farrelly-b080b9279?trk=profile-badge">Cormac Farrelly</a></div>
+"""
+
+# Convert the code to HTML
+linkedin_badge_html = HTML(linkedin_badge_code)
+
+# Display the LinkedIn badge
+st.markdown(linkedin_badge_html)
