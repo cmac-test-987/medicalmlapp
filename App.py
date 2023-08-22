@@ -89,9 +89,10 @@ if st.button("📊 Show Feedback Summary"):
     df = pd.DataFrame(feedback_data, columns=["Feedback", "Count"])
     st.bar_chart(df.set_index("Feedback"))
 
-# LinkedIn Badge Embedding
-badge_url = "https://cmacidontcare.github.io/medicalmlapp/linkedin_badge.html"
-components.iframe(badge_url)
+badge_html = """
+<iframe src="https://cmacidontcare.github.io/medicalmlapp/linkedin_badge.html" width="320" height="213"></iframe>
+"""
+st.markdown(badge_html, unsafe_allow_html=True)
 
 # Author and Social Media Section
 st.markdown("""
