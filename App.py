@@ -89,8 +89,6 @@ if st.button("📊 Show Feedback Summary"):
     df = pd.DataFrame(feedback_data, columns=["Feedback", "Count"])
     st.bar_chart(df.set_index("Feedback"))
 
-badge_url = "https://cmacidontcare.github.io/medicalmlapp/linkedin_badge.html" components
-
 # LinkedIn Badge Embedding
 badge_url = "https://cormacfarrelly.github.io/xray-app/linkedin_badge.html"
 components.iframe(badge_url)
