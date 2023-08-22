@@ -90,7 +90,7 @@ if st.button("📊 Show Feedback Summary"):
     st.bar_chart(df.set_index("Feedback"))
 
 badge_html = """
-<iframe src="https://cmacidontcare.github.io/medicalmlapp/linkedin_badge.html" width="320" height="213"></iframe>
+<iframe src="https://cmacidontcare.github.io/medicalmlapp/linkedin_badge.html" width="640" height="426" frameborder="0" scrolling="no"></iframe>
 """
 st.markdown(badge_html, unsafe_allow_html=True)
 
