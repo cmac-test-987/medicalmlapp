@@ -106,7 +106,7 @@ st.markdown("""
 
 # Import the necessary libraries
 import streamlit as st
-from Python.display import HTML
+from IPython.display import HTML
 
 # Get the LinkedIn badge code
 linkedin_badge_code = """
