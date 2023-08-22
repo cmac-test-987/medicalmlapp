@@ -88,33 +88,21 @@ if st.button("📊 Show Feedback Summary"):
     df = pd.DataFrame(feedback_data, columns=["Feedback", "Count"])
     st.bar_chart(df.set_index("Feedback"))
 
-# Author and Social Media Section
-st.markdown("""
-    <div style="display: flex; align-items: center; margin-top: 20px;">
-        <h3 style="margin: 0;">👨‍💻 By Cormac :) </h3>
-        <a href="https://www.linkedin.com/in/cormac-farrelly-b080b9279/" target="_blank" style="margin-left: 10px;">
-            <i class="fab fa-linkedin" style="font-size: 24px;"></i>
-        </a>
-        <a href="https://twitter.com/Cmac_GN" target="_blank" style="margin-left: 10px;">
-            <i class="fab fa-twitter-square" style="font-size: 24px;"></i>
-        </a>
-        <a href="https://www.instagram.com/cmac_987/" target="_blank" style="margin-left: 10px;">
-            <i class="fab fa-instagram" style="font-size: 24px;"></i>
-        </a>
-    </div>
-""", unsafe_allow_html=True)
-
-# Import the necessary libraries
-import streamlit as st
-from IPython.display import HTML
-
-# Get the LinkedIn badge code
 linkedin_badge_code = """
 <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="cormac-farrelly-b080b9279" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ie.linkedin.com/in/cormac-farrelly-b080b9279?trk=profile-badge">Cormac Farrelly</a></div>
 """
 
-# Convert the code to HTML
-linkedin_badge_html = HTML(linkedin_badge_code)
-
-# Display the LinkedIn badge
-st.markdown(linkedin_badge_html)
+# Author and Social Media Section
+st.markdown("""
+    <div style="display: flex; align-items: center; margin-top: 20px;">
+        <h3 style="margin: 0;">👨‍💻 By Cormac :) </h3> """ 
++ linkedin_badge_code +
+"""
+        <a href="https://urldefense.com/v3/__https://twitter.com/Cmac_GN__;!!ODpDvJZr5w!DdZF0JvUVsv3QtWGZvsA79wolrXVe5YvXo6k-gR0RNrsC3f7hVNIousCU4Fm2cHxXXJS-3OZ_AzBE1096ZiE5OsI$" target="_blank" style="margin-left: 10px;">
+            <i class="fab fa-twitter-square" style="font-size: 24px;"></i>
+        </a>
+        <a href="https://urldefense.com/v3/__https://www.instagram.com/cmac_987/__;!!ODpDvJZr5w!DdZF0JvUVsv3QtWGZvsA79wolrXVe5YvXo6k-gR0RNrsC3f7hVNIousCU4Fm2cHxXXJS-3OZ_AzBE1096UT30p10$" target="_blank" style="margin-left: 10px;">
+            <i class="fab fa-instagram" style="font-size: 24px;"></i>
+        </a>
+    </div>
+""", unsafe_allow_html=True)
