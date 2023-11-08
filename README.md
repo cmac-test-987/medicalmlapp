@@ -93,4 +93,4 @@ https://twitter.com/Cmac_GN
 https://www.instagram.com/cmac_987/
 
 
-Project Repository: https://github.com/cmacidontcare/medicalmlapp.git
+Project Repository: https://github.com/cmac-ire/medicalmlapp.git
